@@ -7,14 +7,16 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="peakTime">PeakTime</string>
 
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="singup">SIGN UP</string>
+
     <string name="login">LOGIN</string>
     <string name="inputEmail">Enter your email</string>
     <string name="username">Username</string>
-    <string name="peakTime">PeakTime</string>
+
     <string name="not_register">Not a member? Sign Up Now</string>
     <string name="already_register">Already have an account? SIGN IN</string>
 
@@ -36,4 +38,11 @@
     <string name="notes">Notes</string>
     <string name="title">title</string>
     <string name="description">description</string>
+
+    <string name="header1_home">have</string>
+    <string name="header2_home">5 tasks</string>
+    <string name="header3_home">today!</string>
+    <string name="date_main">Friday, 23 May 2023</string>
+    <string name="search_main">search...</string>
+
 </resources>

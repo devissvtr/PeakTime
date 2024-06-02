@@ -13,10 +13,13 @@
         android:theme="@style/Theme.PeakTime"
         tools:targetApi="31">
         <activity
-            android:name=".FormActivity"
+            android:name=".ui.visualization.VisualizationActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryActivity"
+            android:name=".ui.form.FormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history.HistoryActivity"
             android:exported="false" />
         <activity
             android:name=".ui.schedule.InputScheduleActivity"

@@ -7,11 +7,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_language"
-            android:icon="@drawable/ic_baseline_add_24"
+            android:icon="@drawable/baseline_translate_24"
             android:title="Language" />
         <item
             android:id="@+id/nav_theme"
-            android:icon="@drawable/ic_baseline_add_24"
+            android:icon="@drawable/outline_settings_24"
             android:title="Theme" />
     </group>
 </menu>

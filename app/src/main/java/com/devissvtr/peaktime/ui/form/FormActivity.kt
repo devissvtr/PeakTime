@@ -1,10 +1,11 @@
-package com.devissvtr.peaktime
+package com.devissvtr.peaktime.ui.form
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.devissvtr.peaktime.R
 
 class FormActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
