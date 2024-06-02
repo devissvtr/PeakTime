@@ -22,7 +22,9 @@
     <string name="not_register">Not a member? Sign Up Now</string>
     <string name="already_register">Already have an account? SIGN IN</string>
     <string name="title">title</string>
-    <string name="description">description</string>
+    <string name="description">Description</string>
     <string name="submit">Submit</string>
     <string name="notes">Notes</string>
+    <string name="time">Time</string>
+    <string name="day">Day</string>
 </resources>

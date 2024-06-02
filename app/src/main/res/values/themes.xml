@@ -22,4 +22,17 @@
     <style name="Theme.PeakTime.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.PeakTime.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- tranparent action bar -->
+
+    <style name="Theme.PeakTime.TransparentActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:actionBarStyle">@style/TransparentActionBar</item>
+    </style>
+
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:elevation">0dp</item>
+    </style>
 </resources>

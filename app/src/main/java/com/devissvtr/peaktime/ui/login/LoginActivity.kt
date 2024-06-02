@@ -13,8 +13,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.devissvtr.peaktime.MainActivity
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivityLoginBinding
+import com.devissvtr.peaktime.ui.schedule.ScheduleActivity
 import com.devissvtr.peaktime.ui.signup.SignupActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -25,6 +27,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         spannableText()
+        binding.button.setOnClickListener {
+            val intent = Intent(this@LoginActivity, ScheduleActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun spannableText() {
