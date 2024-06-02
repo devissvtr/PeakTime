@@ -16,6 +16,7 @@ import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivitySplashScreenBinding
 import com.devissvtr.peaktime.ui.login.LoginActivity
 
+@Suppress("DEPRECATION")
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
     private val splashTime: Long = 5000
