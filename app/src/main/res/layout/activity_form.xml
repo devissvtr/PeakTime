@@ -24,16 +24,16 @@
         android:layout_height="wrap_content"
         android:text="@string/description_form"
         android:textColor="@color/neutral3"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_form1" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -47,7 +47,7 @@
         <EditText
             android:id="@+id/edt_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="@string/name_form"
             android:importantForAutofill="no"
             android:textColor="@color/neutral3"
@@ -72,7 +72,7 @@
             android:id="@+id/edt_profession"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/profession_form"
+            android:hint="@string/age"
             android:importantForAutofill="no"
             android:inputType="textCapSentences"
             android:maxLines="1" />
