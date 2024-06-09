@@ -44,5 +44,6 @@
     <string name="header3_home">today!</string>
     <string name="date_main">Friday, 23 May 2023</string>
     <string name="search_main">search...</string>
+    <string name="google">Google</string>
 
 </resources>
