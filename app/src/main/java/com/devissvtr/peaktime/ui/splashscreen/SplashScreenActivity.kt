@@ -36,6 +36,6 @@ class SplashScreenActivity : AppCompatActivity() {
         val peakColorSpan = ForegroundColorSpan(Color.parseColor("#219EBC"))
         spannableString.setSpan(peakColorSpan, 0, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        binding.tvPeaktime.text = spannableString
+        binding.tvPeakTime.text = spannableString
     }
 }
