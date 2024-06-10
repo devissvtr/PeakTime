@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeakTime"
-        tools:targetApi="31" >
+        tools:targetApi="31"
+        android:name="androidx.multidex.MultiDexApplication">
         <activity
             android:name=".ui.note.DetailNoteActivity"
             android:exported="false" />

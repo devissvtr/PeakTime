@@ -54,8 +54,11 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //image
     implementation(libs.circleimageview)
 
-    implementation("com.github.AnyChart:AnyChart-Android:1.1.2")
-    implementation("androidx.multidex:multidex:2.0.1")
+    //pie chart
+    implementation(libs.mpandroidchart)
+    implementation(libs.anychart.android)
+    implementation(libs.androidx.multidex)
 }
