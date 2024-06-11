@@ -34,13 +34,13 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of I appBarConfiguration = AppBarConfiguration(
-        //        ////            setOf(
-        //        ////                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-        //        ////            ), drawerLayout
-        //        ////        )ds because each
+//        Passing each menu ID as a set of I appBarConfiguration = AppBarConfiguration(
+//                setOf(
+//                    R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+//                ), drawerLayout
+//        )ds because each
+
         // menu should be considered as top level destinations.
-//       
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
