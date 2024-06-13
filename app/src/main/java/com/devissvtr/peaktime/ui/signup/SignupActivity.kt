@@ -41,7 +41,7 @@ class SignupActivity : AppCompatActivity() {
         text.setSpan(clickText, 25, 32, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         text.setSpan(ForegroundColorSpan(Color.BLUE), 25, 32, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        binding.textView.text = text
-        binding.textView.movementMethod = LinkMovementMethod.getInstance()
+        binding.textView2.text = text
+        binding.textView2.movementMethod = LinkMovementMethod.getInstance()
     }
 }
