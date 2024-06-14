@@ -56,6 +56,6 @@ dependencies {
 
     implementation(libs.circleimageview)
 
-    implementation("com.github.AnyChart:AnyChart-Android:1.1.2")
-    implementation("androidx.multidex:multidex:2.0.1")
+    implementation(libs.anychart.android)
+    implementation(libs.androidx.multidex)
 }
