@@ -39,9 +39,9 @@ class NoteAdapter : RecyclerView.Adapter<NoteViewHolder>() {
                 tvDescription.text = note.description
                 tvDate.text = note.date
                 cvNote.setOnClickListener{
-                    val intent = Intent(it.context, InputNoteActivity::class.java)
-                    intent.putExtra(InputNoteActivity.EXTRA_NOTE, note)
-                    it.context.startActivity(intent)
+                    it.context.startActivity(Intent(it.context, InputNoteActivity::class.java).apply {
+                        putExtra(InputNoteActivity.EXTRA_NOTE, note)
+                    })
                 }
             }
         }

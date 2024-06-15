@@ -1,8 +1,11 @@
 package com.devissvtr.peaktime.ui.note
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivityInputNoteBinding
@@ -39,12 +42,9 @@ class InputNoteActivity : AppCompatActivity() {
             note = Note()
         }
 
-        val actionBarTitle: String
         val btnTitle: String
 
         if (isEdit) {
-
-            actionBarTitle = getString(R.string.change)
             btnTitle = getString(R.string.update)
 
             if (note != null) {
@@ -54,24 +54,22 @@ class InputNoteActivity : AppCompatActivity() {
                 }
             }
         } else {
-            actionBarTitle = getString(R.string.add)
             btnTitle = getString(R.string.save)
         }
 
-        supportActionBar?.title = actionBarTitle
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         binding?.btnSubmit?.text = btnTitle
-        binding?.btnSubmit?.setOnClickListener{
+        binding?.btnSubmit?.setOnClickListener {
             val title = binding?.edtTitle?.text.toString().trim()
             val description = binding?.edtDescription?.text.toString().trim()
-            when{
+            when {
                 title.isEmpty() -> {
                     binding?.edtTitle?.error = getString(R.string.empty)
                 }
+
                 description.isEmpty() -> {
                     binding?.edtTitle?.error = getString(R.string.empty)
                 }
+
                 else -> {
                     note.let { note ->
                         note?.title = title
@@ -80,17 +78,56 @@ class InputNoteActivity : AppCompatActivity() {
                     if (isEdit) {
                         inputNoteViewModel.update(note as Note)
                         showToast(getString(R.string.changed))
-                    }else {
+                    } else {
                         note.let { note ->
                             note?.date = DateHelper.getDate()
                         }
                         inputNoteViewModel.insert(note as Note)
-                        showToast(getString(R.string.changed))
+                        showToast(getString(R.string.add))
                     }
                     finish()
                 }
             }
         }
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                showAlertDialog(ALERT_DIALOG_CLOSE)
+            }
+        })
+
+        binding?.btnDelete?.setOnClickListener {
+            showAlertDialog(ALERT_DIALOG_DELETE)
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> showAlertDialog(ALERT_DIALOG_CLOSE)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun showAlertDialog(type: Int) {
+        val isDialogClose = type == ALERT_DIALOG_CLOSE
+        val dialogTitle =
+            if (isDialogClose) getString(R.string.cancel) else getString(R.string.delete)
+        val dialogMessage =
+            if (isDialogClose) getString(R.string.message_cancel) else getString(R.string.message_delete)
+
+        AlertDialog.Builder(this)
+            .setTitle(dialogTitle)
+            .setMessage(dialogMessage)
+            .setCancelable(false)
+            .setPositiveButton(getString(R.string.yes)) { _, _ ->
+                if (!isDialogClose) {
+                    inputNoteViewModel.delete(note as Note)
+                    showToast(getString(R.string.deleted))
+                }
+                finish()
+            }
+            .setNegativeButton(getString(R.string.no)) { dialog, _ -> dialog.cancel() }
+            .create()
+            .show()
     }
 
     private fun showToast(message: String) {

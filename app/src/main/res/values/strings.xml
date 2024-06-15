@@ -51,12 +51,19 @@
     <string name="age">age</string>
     <string name="change">ubah</string>
     <string name="update">Update</string>
-    <string name="add">Add</string>
+    <string name="add">item berhasil ditambah</string>
     <string name="save">Simpan</string>
     <string name="empty">Tidak boleh kosong harus diinput</string>
     <string name="changed">item berhasil diubah</string>
 
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
+    <string name="delete">DELETE</string>
+    <string name="cancel">cancel</string>
+    <string name="message_cancel">Apakah anda ingin membatalkan perubahan pada form?</string>
+    <string name="message_delete">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="yes">Ya</string>
+    <string name="deleted">Item berhasil dihapus</string>
+    <string name="no">tidak</string>
 
 </resources>

@@ -17,9 +17,6 @@
         tools:targetApi="31"
         android:name="androidx.multidex.MultiDexApplication">
         <activity
-            android:name=".ui.note.DetailNoteActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.visualization.VisualizationActivity"
             android:exported="false" />
         <activity
@@ -37,10 +34,12 @@
             android:theme="@style/Theme.PeakTime.TransparentActionBar" />
         <activity
             android:name=".ui.note.InputNoteActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PeakTime.NoActionBar"/>
         <activity
             android:name=".ui.note.NoteActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PeakTime.NoActionBar"/>
         <activity
             android:name=".ui.notification.NotificationActivity"
             android:exported="false" />
