@@ -24,7 +24,7 @@ import com.devissvtr.peaktime.ui.language.LanguageFragment
 import com.devissvtr.peaktime.ui.login.LoginActivity
 import com.devissvtr.peaktime.ui.mode.ModeFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                 .commit()
             navigationView.setCheckedItem(R.id.nav_home)
         }
+    }
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 //        setContentView(binding.root)
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 //        setupActionBarWithNavController(navController, appBarConfiguration)
 //        navView.setupWithNavController(navController)
 //    }
-    }
+//    }
 
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {
 //        // Inflate the menu; this adds items to the action bar if it is present.
@@ -106,6 +107,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        super.onBackPressed()
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
