@@ -49,6 +49,12 @@
     <string name="schedule">Schedule</string>
     <string name="notification">Notification</string>
     <string name="age">age</string>
+    <string name="change">ubah</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="save">Simpan</string>
+    <string name="empty">Tidak boleh kosong harus diinput</string>
+    <string name="changed">item berhasil diubah</string>
 
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>

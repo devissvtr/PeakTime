@@ -2,25 +2,49 @@ package com.devissvtr.peaktime.ui.note
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.devissvtr.peaktime.R
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.devissvtr.peaktime.databinding.ActivityNoteBinding
-import com.devissvtr.peaktime.ui.schedule.InputScheduleActivity
+import com.devissvtr.peaktime.helper.ViewModelFactory
 
 class NoteActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityNoteBinding
+    private var activityNoteBinding: ActivityNoteBinding? = null
+    private val binding get() = activityNoteBinding
+
+    private lateinit var adapter: NoteAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityNoteBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        activityNoteBinding = ActivityNoteBinding.inflate(layoutInflater)
+        setContentView(activityNoteBinding?.root)
 
-        binding.fbAdd.setOnClickListener {
+        adapter = NoteAdapter()
+
+        binding?.rvNote?.layoutManager = LinearLayoutManager(this)
+        binding?.rvNote?.setHasFixedSize(true)
+        binding?.rvNote?.adapter = adapter
+
+        val mainViewModel = obtainViewModel(this@NoteActivity)
+        mainViewModel.getAllNotes().observe(this) { noteList ->
+            if (noteList != null) {
+                adapter.setListNotes(noteList)
+            }
+        }
+
+        binding?.fbAdd?.setOnClickListener {
             val intent = Intent(this@NoteActivity, InputNoteActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun obtainViewModel(activity: NoteActivity): InputNoteViewModel {
+        val factory = ViewModelFactory.getInstance(activity.application)
+        return ViewModelProvider(activity, factory)[InputNoteViewModel::class.java]
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        activityNoteBinding = null
     }
 }
