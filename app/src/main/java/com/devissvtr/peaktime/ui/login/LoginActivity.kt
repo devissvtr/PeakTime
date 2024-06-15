@@ -15,16 +15,17 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.platform.LocalContext
-import androidx.credentials.CredentialManager
-import androidx.credentials.GetCredentialRequest
+//import androidx.compose.runtime.Composable
+//import androidx.compose.runtime.rememberCoroutineScope
+//import androidx.compose.ui.platform.LocalContext
+//import androidx.credentials.CredentialManager
+//import androidx.credentials.GetCredentialRequest
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivityLoginBinding
+import com.devissvtr.peaktime.ui.note.NoteActivity
 import com.devissvtr.peaktime.ui.schedule.ScheduleActivity
 import com.devissvtr.peaktime.ui.signup.SignupActivity
-import com.google.android.libraries.identity.googleid.*
+//import com.google.android.libraries.identity.googleid.*
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import org.w3c.dom.Text
@@ -44,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
 
         spannableText()
         binding.button.setOnClickListener {
-            val intent = Intent(this@LoginActivity, ScheduleActivity::class.java)
+            val intent = Intent(this@LoginActivity, NoteActivity::class.java)
             startActivity(intent)
         }
 
@@ -66,50 +67,50 @@ class LoginActivity : AppCompatActivity() {
         binding.textView2.movementMethod = LinkMovementMethod.getInstance()
     }
 
-    @Composable
-    fun GoogleSignInButton(){
-        val context = LocalContext.current
-        val coroutineScope = rememberCoroutineScope()
-
-
-        val onClick: () -> Unit = {
-            val credentialManager = CredentialManager.create(context)
-
-            val rawNonce = UUID.randomUUID().toString()
-            val bytes = rawNonce.toByteArray()
-            val md = MessageDigest.getInstance("SHA-256")
-            val digest = md.digest(bytes)
-            val hasheadNonce = digest.fold(""){str, it -> str + "%02x".format(it)}
-
-            val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
-                .setFilterByAuthorizedAccounts(false)
-                .setServerClientId("")
-                .setNonce("")
-                .build()
-
-            val request: GetCredentialRequest = GetCredentialRequest.Builder()
-                .addCredentialOption(googleIdOption)
-                .build()
-
-            coroutineScope.launch {
-                val result = credentialManager.getCredential(
-                    request = request,
-                    context = context,
-                )
-
-                val credential = result.credential
-
-                val googleIdTokenCredential = GoogleIdTokenCredential
-                    .createFrom(credential.data)
-
-                val googleIdToken = googleIdTokenCredential.idToken
-
-                Log.i(TAG, googleIdToken)
-
-                Toast.makeText(context, "you are signed in", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        //Button(onClick = onClick) {}
-    }
+//    @Composable
+//    fun GoogleSignInButton(){
+//        val context = LocalContext.current
+//        val coroutineScope = rememberCoroutineScope()
+//
+//
+//        val onClick: () -> Unit = {
+//            val credentialManager = CredentialManager.create(context)
+//
+//            val rawNonce = UUID.randomUUID().toString()
+//            val bytes = rawNonce.toByteArray()
+//            val md = MessageDigest.getInstance("SHA-256")
+//            val digest = md.digest(bytes)
+//            val hasheadNonce = digest.fold(""){str, it -> str + "%02x".format(it)}
+//
+//            val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
+//                .setFilterByAuthorizedAccounts(false)
+//                .setServerClientId("")
+//                .setNonce("")
+//                .build()
+//
+//            val request: GetCredentialRequest = GetCredentialRequest.Builder()
+//                .addCredentialOption(googleIdOption)
+//                .build()
+//
+//            coroutineScope.launch {
+//                val result = credentialManager.getCredential(
+//                    request = request,
+//                    context = context,
+//                )
+//
+//                val credential = result.credential
+//
+//                val googleIdTokenCredential = GoogleIdTokenCredential
+//                    .createFrom(credential.data)
+//
+//                val googleIdToken = googleIdTokenCredential.idToken
+//
+//                Log.i(TAG, googleIdToken)
+//
+//                Toast.makeText(context, "you are signed in", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//
+//        //Button(onClick = onClick) {}
+//    }
 }
