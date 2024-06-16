@@ -68,5 +68,18 @@
     <string name="menu_home">Home menu</string>
     <string name="menu_language">Language</string>
     <string name="menu_mode">Theme</string>
+    <string name="error_password">Password must be more than 8 characters</string>
+    <string name="gender">gender</string>
+    <string name="hintForm">Answer with numbers only, in hours. Example: 6 hours → 6</string>
+    <string name="q9">How much time do you spend on average working/performing tasks?</string>
+    <string name="q8">What types of distractions do you experience while working or completing tasks?</string>
+    <string name="q7">How urgent is the work or task you usually need to complete?</string>
+    <string name="q6">How much time do you spend sleeping on average in a day?</string>
+    <string name="q5">Typically how important is the job or task you do in achieving your goals?</string>
+    <string name="q4">How long is the deadline for the tasks you usually work on?</string>
+    <string name="q3">How do you feel or mood before completing a task?</string>
+    <string name="q2">How much rest time do you average between work/tasks in a day? (Rest other than sleep)</string>
+    <string name="q1">What types of tasks do you usually work on?</string>
+    <string name="q10">How many days are spent doing main work/activities in a week?</string>
 
 </resources>

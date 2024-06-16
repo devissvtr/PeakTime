@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Red">#E91E63</color>
 
     <color name="primary1">#126782</color>
     <color name="primary2">#219EBC</color>
@@ -16,5 +17,8 @@
     <color name="neutral3">#B7B7B7</color>
     <color name="neutral4">#EFEFEF</color>
     <color name="neutral5">#F6FAF9</color>
-    <color name="Red">#E91E63</color>
+
+    <color name="font_form">#dad7cd</color>
+    <color name="font_form2">#6c757d</color>
+    <color name="error_form">#d62828</color>
 </resources>

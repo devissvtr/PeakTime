@@ -1,92 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_form1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/header_form"
-        android:textColor="@color/primary2"
-        android:textSize="28sp"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_marginVertical="30dp"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_form2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/description_form"
-        android:textColor="@color/neutral3"
-        android:layout_marginTop="10dp"
-        android:gravity="center
-" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tl_name"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_form2"
-        app:counterEnabled="true"
-        app:counterMaxLength="50" >
-
-        <EditText
-            android:id="@+id/edt_name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="@string/name_form"
-            android:importantForAutofill="no"
-            android:textColor="@color/neutral3"
-            android:inputType="textCapSentences"
-            android:maxLines="1" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tl_profession"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tl_name">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/edt_profession"
+        <TextView
+            android:id="@+id/tv_form1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/age"
-            android:importantForAutofill="no"
-            android:inputType="textCapSentences"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:text="@string/header_form"
+            android:textColor="@color/primary2"
+            android:textSize="28sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginVertical="30dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/primary1"
-        android:text="@string/submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        <TextView
+            android:id="@+id/tv_form2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_form"
+            android:textColor="@color/neutral3"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_form1"/>
 
-</RelativeLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_form2"
+            app:counterEnabled="true"
+            app:counterMaxLength="50" >
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/name_form"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_age"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="@id/tl_name"
+            app:layout_constraintTop_toBottomOf="@+id/tl_name"
+            app:counterEnabled="true"
+            app:counterMaxLength="2">
+
+            <EditText
+                android:id="@+id/edt_age"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/age"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_gender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_name"
+            app:layout_constraintTop_toBottomOf="@+id/tl_name">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/gender"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/q1"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_age"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question1">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q2"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field1"/>
+
+        <TextView
+            android:id="@+id/tv_hintQ2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hintForm"
+            android:textColor="@color/neutral3"
+            android:textSize="10sp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question2"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_field2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q3"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field2"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question3">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q4"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field3"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question4">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q5"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field4"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question5">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q6"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field5"/>
+
+        <TextView
+            android:id="@+id/tv_hintQ6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hintForm"
+            android:textColor="@color/neutral3"
+            android:textSize="10sp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question6"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_field6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q7"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field6"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field7"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question7">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q8"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field7"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field8"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question8">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q9"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field8"/>
+
+        <TextView
+            android:id="@+id/tv_hintQ9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hintForm"
+            android:textColor="@color/neutral3"
+            android:textSize="10sp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question9"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field9"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ9">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_field9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_question10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q10"
+            android:textColor="@color/neutral2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_field9"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_field10"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tl_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question10">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_field10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint=""
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:backgroundTint="@color/primary1"
+            android:text="@string/submit"
+            app:layout_constraintEnd_toEndOf="@id/tl_field10"
+            app:layout_constraintStart_toStartOf="@id/tl_field10"
+            app:layout_constraintTop_toBottomOf="@id/tl_field10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
