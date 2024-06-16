@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
 
         spannableText()
         binding.button.setOnClickListener {
-            val intent = Intent(this@LoginActivity, NoteActivity::class.java)
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(intent)
         }
 

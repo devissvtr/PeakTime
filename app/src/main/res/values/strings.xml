@@ -65,5 +65,8 @@
     <string name="yes">Ya</string>
     <string name="deleted">Item berhasil dihapus</string>
     <string name="no">tidak</string>
+    <string name="menu_home">Home menu</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_mode">Theme</string>
 
 </resources>
