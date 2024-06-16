@@ -25,7 +25,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="262dp"
+            android:layout_height="266dp"
             android:src="@drawable/background_main" />
 
         <TextView
@@ -105,28 +105,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
                 android:hint="@string/search_main"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry" />
+                android:paddingStart="48dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
     </FrameLayout>
 
     <ImageView
         android:id="@+id/btn_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/schedule"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="80dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="38dp"
         android:contentDescription="@string/schedule"/>
 
     <ImageView
         android:id="@+id/btn_history"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -137,8 +136,8 @@
 
     <ImageView
         android:id="@+id/btn_visualization"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/visualization"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -149,13 +148,13 @@
 
     <ImageView
         android:id="@+id/btn_notes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/notes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="160dp"
         android:layout_marginStart="40dp"
         android:contentDescription="@string/notes"/>
 
