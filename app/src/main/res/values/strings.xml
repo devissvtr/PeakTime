@@ -81,5 +81,6 @@
     <string name="q2">How much rest time do you average between work/tasks in a day? (Rest other than sleep)</string>
     <string name="q1">What types of tasks do you usually work on?</string>
     <string name="q10">How many days are spent doing main work/activities in a week?</string>
+    <string name="switchTheme">Switch Theme</string>
 
 </resources>

@@ -1,5 +1,6 @@
 package com.devissvtr.peaktime
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.navigation.NavigationView
@@ -12,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.devissvtr.peaktime.databinding.ActivityMainBinding
 import de.hdodenhof.circleimageview.CircleImageView
+import android.provider.Settings
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +40,29 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        setupAction()
+    }
+
+    private fun setupAction() {
+        binding.navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_language -> {
+                    val intent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+                    startActivity(intent)
+                    true
+                }
+                R.id.nav_theme -> {
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.nav_theme)
+                    true
+                }
+                R.id.nav_home -> {
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.nav_home)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
