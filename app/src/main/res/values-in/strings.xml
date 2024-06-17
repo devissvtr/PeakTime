@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PeakTime</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="peakTime">PeakTime</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="singup">MENDAFTAR</string>
+
+    <string name="login">GABUNG</string>
+    <string name="inputEmail">Masukan Emailmu</string>
+    <string name="username">Username</string>
+
+    <string name="not_register">Not a member? Sign Up Now</string>
+    <string name="already_register">Already have an account? SIGN IN</string>
+
+    <string name="submit">Submit</string>
+
+    <string name="time">Time</string>
+    <string name="day">Day</string>
+
+    <string name="name_form">name</string>
+    <string name="profession_form">profession</string>
+    <string name="description_form">Please fill out according to your time pattern</string>
+    <string name="header_form">Discover Your Unique Chronotype</string>
+
+    <string name="history">Sejarah</string>
+    <string name="title_history">Title</string>
+    <string name="time_history">Time</string>
+    <string name="description_history">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+
+    <string name="notes">Catatan</string>
+    <string name="title">judul</string>
+    <string name="description">keterangan</string>
+
+    <string name="header1_home">memiliki</string>
+    <string name="header2_home">5 tugas</string>
+    <string name="header3_home">Hari ini!</string>
+    <string name="date_main">Friday, 23 May 2023</string>
+    <string name="search_main">mencari...</string>
+    <string name="google">Google</string>
+    <string name="visualization">Visualisasi</string>
+    <string name="schedule">Jadwal</string>
+    <string name="notification">Pemberitahuan</string>
+    <string name="age">Umur</string>
+    <string name="change">ubah</string>
+    <string name="update">Memperbarui</string>
+    <string name="add">Item berhasil ditambahkan</string>
+    <string name="save">Simpan</string>
+    <string name="empty">Tidak boleh kosong, harus diisi</string>
+    <string name="changed">Item berhasil diubah</string>
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="delete">Hapus</string>
+    <string name="cancel">Batal</string>
+    <string name="message_cancel">Apakah Anda ingin membatalkan perubahan pada item?</string>
+    <string name="message_delete">Apakah Anda yakin ingin menghapus item ini?</string>
+    <string name="yes">Ya</string>
+    <string name="deleted">Item berhasil dihapus</string>
+    <string name="no">Tidak</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_language">Bahasa</string>
+    <string name="menu_mode">Tema</string>
+    <string name="error_password">Kata sandi harus lebih dari 8 karakter</string>
+    <string name="gender">jenis kelamin</string>
+    <string name="hintForm">Jawab dengan angka saja, dalam hitungan jam. Contoh: 6 jam → 6</string>
+    <string name="q9">Berapa banyak waktu yang Anda habiskan untuk rata-rata bekerja/melaksanakan tugas?</string>
+    <string name="q8">Jenis gangguan apa yang Anda alami saat bekerja atau menyelesaikan tugas?</string>
+    <string name="q7">Seberapa mendesakkah pekerjaan atau tugas yang biasanya perlu Anda selesaikan?</string>
+    <string name="q6">Berapa lama rata-rata waktu yang Anda habiskan untuk tidur dalam sehari?</string>
+    <string name="q5">Biasanya seberapa penting pekerjaan atau tugas yang Anda lakukan dalam mencapai tujuan Anda?</string>
+    <string name="q4">Berapa lama tenggat waktu untuk tugas yang biasa Anda kerjakan?</string>
+    <string name="q3">Bagaimana perasaan atau suasana hati Anda sebelum menyelesaikan suatu tugas?</string>
+    <string name="q2">Berapa lama waktu istirahat rata-rata Anda di antara pekerjaan/tugas dalam sehari? (Istirahat selain tidur)</string>
+    <string name="q1">Jenis tugas apa yang biasanya Anda kerjakan?</string>
+    <string name="q10">Berapa hari yang dihabiskan untuk melakukan pekerjaan/kegiatan utama dalam seminggu?</string>
+    <string name="switchTheme">Ganti Tema</string>
+    <string name="home">Rumah</string>
+    <string name="language">Bahasa</string>
+    <string name="theme">Tema</string>
+    <string name="logout">Keluar</string>
+    <string name="recommendation">Rekomendasi</string>
+</resources>
