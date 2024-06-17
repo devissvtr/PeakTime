@@ -8,6 +8,11 @@
         android:checkableBehavior="single">
 
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"/>
+
+        <item
             android:id="@+id/nav_language"
             android:icon="@drawable/baseline_translate_24"
             android:title="Language" />
@@ -16,6 +21,8 @@
             android:id="@+id/nav_theme"
             android:icon="@drawable/outline_settings_24"
             android:title="Theme" />
+
+
 
     </group>
 
