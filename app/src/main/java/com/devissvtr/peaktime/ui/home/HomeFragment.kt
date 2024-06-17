@@ -13,6 +13,7 @@ import com.devissvtr.peaktime.databinding.ContentMainBinding
 import com.devissvtr.peaktime.databinding.FragmentHomeBinding
 import com.devissvtr.peaktime.ui.history.HistoryActivity
 import com.devissvtr.peaktime.ui.note.NoteActivity
+import com.devissvtr.peaktime.ui.notification.NotificationActivity
 import com.devissvtr.peaktime.ui.schedule.ScheduleActivity
 import com.devissvtr.peaktime.ui.visualization.VisualizationActivity
 
@@ -53,6 +54,11 @@ class HomeFragment : Fragment() {
 
         binding.btnVisualization.setOnClickListener {
             val intent = Intent(requireContext(), VisualizationActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnNotification.setOnClickListener {
+            val intent = Intent(requireContext(), NotificationActivity::class.java)
             startActivity(intent)
         }
 
