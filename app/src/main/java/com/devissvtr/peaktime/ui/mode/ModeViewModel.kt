@@ -3,11 +3,18 @@ package com.devissvtr.peaktime.ui.mode
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
 
-class ModeViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+class ModeViewModel(private val pref : SettingPreferences) : ViewModel() {
+    fun getTheme(): LiveData<Boolean> {
+        return pref.getThemeSetting().asLiveData()
     }
-    val text: LiveData<String> = _text
+
+    fun saveTheme(isDarkModeActive : Boolean) {
+        viewModelScope.launch {
+            pref.saveThemeSetting(isDarkModeActive)
+        }
+    }
 }

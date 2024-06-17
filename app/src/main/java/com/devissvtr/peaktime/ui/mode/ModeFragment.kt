@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.devissvtr.peaktime.databinding.FragmentModeBinding
+import com.devissvtr.peaktime.helper.ViewModelFactory
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class ModeFragment : Fragment() {
@@ -23,21 +25,30 @@ class ModeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val modeViewModel =
-            ViewModelProvider(this)[ModeViewModel::class.java]
+        //val modeViewModel = ViewModelProvider(this)[ModeViewModel::class.java]
 
         _binding = FragmentModeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val switchTheme: SwitchMaterial = binding.switchTheme
-        switchTheme.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
+
+        val pref = SettingPreferences.getInstance(requireActivity().applicationContext.dataStore)
+        val modeViewModel = ViewModelProvider(this, ModelFactory(pref)).get(
+            ModeViewModel::class.java
+        )
+
+        modeViewModel.getTheme().observe(this) { DarkMode: Boolean ->
+            if (DarkMode){
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 switchTheme.isChecked = true
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 switchTheme.isChecked = false
             }
+        }
+
+        switchTheme.setOnCheckedChangeListener{_: CompoundButton?, isChecked: Boolean ->
+            modeViewModel.saveTheme((isChecked))
         }
 
         return root
