@@ -11,3 +11,12 @@ data class RegisterResponse(
     val message: String? = null
 
 )
+
+data class LoginResponse(
+    @field:SerializedName("status")
+    val status: String? = null,
+
+    @field:SerializedName("message")
+    val message: String? = null
+
+)

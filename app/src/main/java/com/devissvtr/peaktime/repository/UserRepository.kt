@@ -6,6 +6,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.liveData
 import com.devissvtr.peaktime.network.preference.UserPreferences
+import com.devissvtr.peaktime.network.response.LoginResponse
 import com.devissvtr.peaktime.network.response.RegisterResponse
 import com.devissvtr.peaktime.network.retrofit.ApiService
 import com.devissvtr.peaktime.utils.Result
@@ -24,6 +25,18 @@ class UserRepository private constructor(
         } catch (e: HttpException) {
             val errorResponse = e.response()?.errorBody()?.string()?.let {
                 Gson().fromJson(it, RegisterResponse::class.java)
+            }
+            emit(Result.Failure(errorResponse?.message ?: "Unknown error"))
+        }
+    }
+
+    fun login(email: String, password: String) = liveData {
+        emit(Result.InProgress)
+        try {
+            emit(Result.Success(apiService.login(email, password)))
+        } catch (e: HttpException) {
+            val errorResponse = e.response()?.errorBody()?.string()?.let {
+                Gson().fromJson(it, LoginResponse::class.java)
             }
             emit(Result.Failure(errorResponse?.message ?: "Unknown error"))
         }

@@ -9,19 +9,15 @@ import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ViewModel
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivitySignupBinding
 import com.devissvtr.peaktime.helper.UserModelFactory
-import com.devissvtr.peaktime.helper.ViewModelFactory
 import com.devissvtr.peaktime.ui.login.LoginActivity
 import com.devissvtr.peaktime.utils.Result
 
@@ -47,7 +43,7 @@ class SignupActivity : AppCompatActivity() {
         val name = binding.nameEditText.text.toString()
         val email = binding.emailEditText.text.toString()
         val password = binding.passwordEditText.text.toString()
-        register.userRegister(name, email, password)
+        register.userRegister(name = name, email = email, password = password)
             .observe(this) { result ->
                 if (result != null) {
                     when (result) {
@@ -57,7 +53,7 @@ class SignupActivity : AppCompatActivity() {
                         is Result.Success -> {
                             AlertDialog.Builder(this).apply {
                                 setTitle("Registration Success")
-                                setMessage("Your account has been registerd")
+                                setMessage("Your account has been registered")
                                 setPositiveButton("Continue") { _, _ ->
                                     val intent = Intent(this@SignupActivity, LoginActivity::class.java)
                                     startActivity(intent)
@@ -69,6 +65,7 @@ class SignupActivity : AppCompatActivity() {
                         }
                         is Result.Failure -> {
                             showToast(result.message)
+                            Log.e("SignupActivity", "Registration failed: ${result.message}")
                         }
                     }
                 }

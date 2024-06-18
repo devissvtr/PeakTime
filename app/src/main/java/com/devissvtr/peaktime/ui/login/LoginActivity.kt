@@ -25,9 +25,12 @@ import com.devissvtr.peaktime.MainActivity
 //import androidx.credentials.GetCredentialRequest
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivityLoginBinding
+import com.devissvtr.peaktime.helper.UserModelFactory
+import com.devissvtr.peaktime.helper.ViewModelFactory
 import com.devissvtr.peaktime.ui.note.NoteActivity
 import com.devissvtr.peaktime.ui.schedule.ScheduleActivity
 import com.devissvtr.peaktime.ui.signup.SignupActivity
+import com.devissvtr.peaktime.utils.Result
 //import com.google.android.libraries.identity.googleid.*
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
@@ -40,6 +43,9 @@ import kotlin.math.log
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private val login by viewModels<LoginViewModel> {
+        UserModelFactory.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +53,33 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         spannableText()
-        binding.button.setOnClickListener {
-            val intent = Intent(this@LoginActivity, MainActivity::class.java)
-            startActivity(intent)
-        }
 
+        binding.button.setOnClickListener {
+            postLogin()
+//            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+//            startActivity(intent)
+        }
+    }
+
+    private fun postLogin() {
+        val email = binding.emailEditText.text.toString()
+        val password = binding.passwordEditText.text.toString()
+        login.login(email = email, password = password).observe(this) { result ->
+            if (result!= null) {
+                when(result) {
+                    is Result.InProgress -> {
+
+                    }
+
+                    is Result.Success -> {
+                    }
+
+                    is Result.Failure -> {
+
+                    }
+                }
+            }
+        }
     }
 
     private fun spannableText() {
