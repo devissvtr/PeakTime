@@ -15,6 +15,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import com.devissvtr.peaktime.MainActivity
@@ -68,18 +69,34 @@ class LoginActivity : AppCompatActivity() {
             if (result!= null) {
                 when(result) {
                     is Result.InProgress -> {
-
                     }
 
                     is Result.Success -> {
+                        AlertDialog.Builder(this).apply {
+                            setTitle("Login Success")
+                            setMessage("You have successfully logged in")
+                            setPositiveButton("Continue") { _, _ ->
+                                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                startActivity(intent)
+                                finish()
+                            }
+                            create()
+                            show()
+                        }
                     }
 
                     is Result.Failure -> {
-
+                        showToast(result.message)
+                        Log.e("LoginActivity", "Login failed: ${result.message}")
                     }
                 }
             }
         }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this,message, Toast.LENGTH_LONG).show()
     }
 
     private fun spannableText() {

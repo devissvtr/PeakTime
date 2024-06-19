@@ -1,6 +1,7 @@
 package com.devissvtr.peaktime.network.retrofit
 
 import com.devissvtr.peaktime.network.preference.FormData
+import com.devissvtr.peaktime.network.response.AutenticationHandler
 import com.devissvtr.peaktime.network.response.FormRequest
 import com.devissvtr.peaktime.network.response.FormResponse
 import com.devissvtr.peaktime.network.response.NotificationRequest
@@ -39,6 +40,12 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String,
     ): RegisterResponse
+
+    @FormUrlEncoded
+    @POST("users/{userId}")
+    suspend fun autenticationHandler(
+        @Field("code") code: String
+    ): AutenticationHandler
 
     //form api
     @POST("users/{userId}/forms")
