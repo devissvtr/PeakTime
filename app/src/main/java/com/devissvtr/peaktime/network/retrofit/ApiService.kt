@@ -1,8 +1,6 @@
 package com.devissvtr.peaktime.network.retrofit
 
-import com.devissvtr.peaktime.network.preference.FormData
 import com.devissvtr.peaktime.network.response.AutenticationHandler
-import com.devissvtr.peaktime.network.response.FormRequest
 import com.devissvtr.peaktime.network.response.FormResponse
 import com.devissvtr.peaktime.network.response.NotificationRequest
 import com.devissvtr.peaktime.network.response.NotificationResponse
@@ -11,15 +9,15 @@ import com.devissvtr.peaktime.network.response.PredictionResult
 import com.devissvtr.peaktime.network.response.RegisterResponse
 import com.devissvtr.peaktime.network.response.ScheduleRequest
 import com.devissvtr.peaktime.network.response.ScheduleResponse
-import okhttp3.ResponseBody
+import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.Part
 import retrofit2.http.Path
 
 interface ApiService {
@@ -48,10 +46,21 @@ interface ApiService {
     ): AutenticationHandler
 
     //form api
+    @Multipart
     @POST("users/{userId}/forms")
     suspend fun formData(
-        @Path("userId") userId: String,
-        @Body formRequest: FormRequest
+//        @Path("userId") userId: String,
+        @Part("age") age: RequestBody,
+        @Part("task") task: RequestBody,
+        @Part("average_rest") averageRest: RequestBody,
+        @Part("mood_before_work") moodBeforeWork: RequestBody,
+        @Part("deadline") deadline: RequestBody,
+        @Part("importance") importance: RequestBody,
+        @Part("sleep_average") sleepAverage: RequestBody,
+        @Part("urgency") urgency: RequestBody,
+        @Part("total_gangguan") totalGangguan: RequestBody,
+        @Part("average_work_hour") averageWorkHour: RequestBody,
+        @Part("work_days") workDays: RequestBody,
     ): FormResponse
 
     //result prediction

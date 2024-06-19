@@ -1,8 +1,6 @@
 package com.devissvtr.peaktime.ui.form
 
-object FormData {
-    val itemsGender = listOf("Male", "Female")
-
+object FieldData {
     val itemsQ1 = listOf("Creative (Graphic design, Writer, etc.)",
         "Analytical (Data analysis, Financial analysis, etc.)",
         "Physical (Soccer player, Volleyball player, Laborer, etc.)",
@@ -48,7 +46,4 @@ object FormData {
         "5 days",
         "6 days",
         "7 days")
-
-
-
 }
