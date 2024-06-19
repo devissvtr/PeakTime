@@ -18,6 +18,10 @@ class UserRepository private constructor(
     private val userPreference: UserPreferences
 ) {
 
+    fun updateApiService(apiService: ApiService) {
+        this.apiService = apiService
+    }
+
     fun register(name: String, email: String, password: String) = liveData {
         emit(Result.InProgress)
         try {
