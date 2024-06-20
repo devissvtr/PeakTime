@@ -6,6 +6,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.liveData
 import com.devissvtr.peaktime.network.preference.UserPreferences
+import com.devissvtr.peaktime.network.response.AutenticationHandler
 import com.devissvtr.peaktime.network.response.LoginResponse
 import com.devissvtr.peaktime.network.response.RegisterResponse
 import com.devissvtr.peaktime.network.retrofit.ApiService
@@ -43,6 +44,18 @@ class UserRepository private constructor(
                 Gson().fromJson(it, LoginResponse::class.java)
             }
             emit(Result.Failure(errorResponse?.message ?: "Unknown error"))
+        }
+    }
+
+    fun verification(userId: String, code: String) = liveData {
+        emit(Result.InProgress)
+        try {
+            emit(Result.Success(apiService.autenticationHandler(userId, code)))
+        } catch (e: HttpException) {
+            val errorResponse = e.response()?.errorBody()?.string()?.let {
+                Gson().fromJson(it, AutenticationHandler::class.java)
+            }
+            emit(Result.Failure(errorResponse?.message?: "Unknown error"))
         }
     }
 

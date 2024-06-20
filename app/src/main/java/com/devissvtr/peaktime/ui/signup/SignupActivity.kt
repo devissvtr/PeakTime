@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivitySignupBinding
 import com.devissvtr.peaktime.helper.UserModelFactory
+import com.devissvtr.peaktime.ui.authentication.AuthActivity
 import com.devissvtr.peaktime.ui.login.LoginActivity
 import com.devissvtr.peaktime.utils.Result
 
@@ -58,7 +59,8 @@ class SignupActivity : AppCompatActivity() {
                                     setTitle("Registration Success")
                                     setMessage("Your account has been registered")
                                     setPositiveButton("Continue") { _, _ ->
-                                        val intent = Intent(this@SignupActivity, LoginActivity::class.java)
+                                        val intent = Intent(this@SignupActivity, AuthActivity::class.java)
+                                        intent.putExtra("USER_ID", userId)
                                         startActivity(intent)
                                         finish()
                                     }

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.devissvtr.peaktime.di.UserInjection
 import com.devissvtr.peaktime.repository.UserRepository
+import com.devissvtr.peaktime.ui.authentication.AuthViewModel
 import com.devissvtr.peaktime.ui.login.LoginViewModel
 import com.devissvtr.peaktime.ui.signup.RegisterViewModel
 
@@ -34,6 +35,10 @@ class UserModelFactory(private val repository: UserRepository) :
 
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(AuthViewModel::class.java) -> {
+                AuthViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("\"Unknown ViewModel class: ${modelClass.name}\"")
