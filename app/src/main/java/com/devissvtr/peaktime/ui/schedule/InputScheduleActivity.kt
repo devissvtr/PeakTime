@@ -8,18 +8,10 @@ import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.TimePicker
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.devissvtr.peaktime.R
-import com.devissvtr.peaktime.databinding.ActivityFormBinding
 import com.devissvtr.peaktime.databinding.ActivityInputScheduleBinding
 import com.devissvtr.peaktime.network.database.Schedule
-import com.devissvtr.peaktime.repository.Result
-import com.devissvtr.peaktime.ui.form.FormViewModel
-import com.google.android.material.textfield.TextInputLayout
 
 @Suppress("DEPRECATION")
 class InputScheduleActivity : AppCompatActivity() {
