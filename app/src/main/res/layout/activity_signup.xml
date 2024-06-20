@@ -35,6 +35,7 @@
         app:boxCornerRadiusTopStart="10dp"
         android:textColorHint="@color/font_form"
         app:counterMaxLength="50"
+        app:counterEnabled="true"
         app:endIconMode="custom">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -44,7 +45,9 @@
             android:ems="10"
             android:hint="@string/username"
             android:paddingStart="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            android:backgroundTint="@color/primary1"
+            android:textColor="@color/font_form2" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,9 +66,10 @@
         app:boxCornerRadiusTopStart="10dp"
         android:textColorHint="@color/font_form"
         app:counterMaxLength="50"
+        app:counterEnabled="true"
         app:endIconMode="custom">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.devissvtr.peaktime.ui.customviews.CustomEmail
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +77,9 @@
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:paddingStart="48dp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:backgroundTint="@color/primary1"
+            android:textColor="@color/font_form2"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -92,7 +98,8 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopStart="10dp"
         android:textColorHint="@color/font_form"
-        app:counterMaxLength="50">
+        app:counterEnabled="true"
+        app:counterMaxLength="20">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
@@ -102,6 +109,8 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingStart="48dp"
+            android:backgroundTint="@color/primary1"
+            android:textColor="@color/font_form2"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,6 +122,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/primary1"
         android:text="@string/singup"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordTextLayout" />

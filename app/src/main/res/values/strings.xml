@@ -42,7 +42,7 @@
     <string name="header1_home">have</string>
     <string name="header2_home">5 tasks</string>
     <string name="header3_home">today!</string>
-    <string name="date_main">Friday, 23 May 2023</string>
+    <string name="date_main">Friday, 21 June 2024</string>
     <string name="search_main">search...</string>
     <string name="google">Google</string>
     <string name="visualization">Visualization</string>
@@ -86,7 +86,7 @@
     <string name="language">Language</string>
     <string name="theme">Theme</string>
     <string name="logout">Logout</string>
-    <string name="recommendation">Recommendation</string>
+    <string name="type_chrono">Type Chronotype</string>
     <string name="registration_success">Registration Success</string>
     <string name="email_token">Check your email for the token</string>
     <string name="id_notFound">User id not found</string>
@@ -95,5 +95,29 @@
     <string name="verification_code">Input your verification code</string>
     <string name="input_token">Input your token</string>
     <string name="verification">verification</string>
+    <string name="or">or</string>
+    <string name="effective_time">Effective Time</string>
+    <string name="timeSchedule">13.00 - 15.00</string>
+    <string name="finish_time">finish time</string>
+    <string name="finish_date">finish date</string>
+    <string name="start_time">start time</string>
+    <string name="start_date">start date</string>
+    <string name="wolf">Wolf</string>
+    <string name="descChrono">If you know someone who isn’t a “morning person,” chances are they’re a wolf — about 15% of the population has this chronotype. Wolves usually wake up later in the day. They’ll also get bursts of energy in the evening. Midnight or later is a common bedtime for wolves.</string>
+    <string name="percentage">15% of population</string>
+    <string name="work_start_time">Work Start Time:</string>
+    <string name="timeStart">13:00</string>
+    <string name="work_finish_time">Work Finish Time:</string>
+    <string name="timeFinish">15:00</string>
+    <string name="wake_up_time">Wake Up Time:</string>
+    <string name="timeWakeUp">07:00</string>
+    <string name="sleep_time">Sleep Time:</string>
+    <string name="timeSleep">00:00</string>
+    <string name="effectiveTime">Effective time: 13:00 - 15:00</string>
+    <string name="wakeTime">Wake up time : 07:00</string>
+    <string name="sleepTime">Sleep time : 00:00</string>
+    <string name="setting_dark_mode">Setting Dark Mode</string>
+    <string name="turn_dark_mode">Turn Dark Mode</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

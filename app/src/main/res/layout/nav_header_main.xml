@@ -29,13 +29,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.20"
             tools:layout_editor_absoluteX="0dp"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/color" />
 
         <TextView
             android:id="@+id/tv_nameUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Alma Lawson"
+            android:text="Devi Savitri"
             android:textSize="18sp"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginTop="10dp"
@@ -47,7 +47,7 @@
             android:id="@+id/tv_emailUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="alma.lawson@example.com"
+            android:text="lkdevi16@gmail.com"
             android:textSize="12sp"
             android:fontFamily="@font/montserrat_regular"
             app:layout_constraintStart_toStartOf="parent"

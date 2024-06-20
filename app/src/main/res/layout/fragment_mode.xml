@@ -7,27 +7,49 @@
     tools:context=".ui.mode.ModeFragment">
 
     <TextView
-        android:id="@+id/tv_theme"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_settingMode"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="@string/switchTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/setting_dark_mode"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_darkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/turn_on_dark_mode"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/tv_settingMode"
+        app:layout_constraintTop_toBottomOf="@id/tv_settingMode" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch_theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/tv_darkMode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_theme" />
+        app:layout_constraintTop_toTopOf="@id/tv_settingMode" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/switch_theme"
+        app:layout_constraintStart_toStartOf="@id/tv_darkMode"
+        app:layout_constraintTop_toBottomOf="@id/tv_darkMode" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-51dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

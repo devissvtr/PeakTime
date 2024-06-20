@@ -16,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/header_form"
-            android:textColor="@color/primary2"
-            android:textSize="28sp"
+            android:textColor="@color/primary1"
+            android:textSize="30sp"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginVertical="30dp"
             android:layout_marginStart="20dp"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/description_form"
-            android:textColor="@color/neutral3"
+            android:textColor="@color/neutral2"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:gravity="center"
@@ -58,6 +58,7 @@
                 android:layout_height="50dp"
                 android:hint="@string/name_form"
                 android:importantForAutofill="no"
+                android:textColor="@color/neutral2"
                 android:inputType="textCapSentences"
                 android:maxLines="1" />
 
@@ -92,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/q1"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:gravity="center"
@@ -125,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q2"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +153,9 @@
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
             app:layout_constraintStart_toStartOf="@id/tl_age"
-            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ2">
+            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ2"
+            app:counterEnabled="true"
+            app:counterMaxLength="2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_field2"
@@ -168,7 +171,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q3"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -200,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q4"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -232,7 +235,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q5"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -264,7 +267,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q6"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -291,7 +294,9 @@
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
             app:layout_constraintStart_toStartOf="@id/tl_age"
-            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ6">
+            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ6"
+            app:counterEnabled="true"
+            app:counterMaxLength="2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_field6"
@@ -307,7 +312,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q7"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -339,7 +344,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q8"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -371,7 +376,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q9"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -398,7 +403,9 @@
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
             app:layout_constraintStart_toStartOf="@id/tl_age"
-            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ9">
+            app:layout_constraintTop_toBottomOf="@+id/tv_hintQ9"
+            app:counterEnabled="true"
+            app:counterMaxLength="2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_field9"
@@ -414,7 +421,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/q10"
-            android:textColor="@color/neutral2"
+            android:textColor="@color/neutral1"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -452,7 +459,8 @@
             android:text="@string/submit"
             app:layout_constraintEnd_toEndOf="@id/tl_field10"
             app:layout_constraintStart_toStartOf="@id/tl_field10"
-            app:layout_constraintTop_toBottomOf="@id/tl_field10" />
+            app:layout_constraintTop_toBottomOf="@id/tl_field10"
+            android:textColor="@color/white"/>
 
         <ProgressBar
             android:id="@+id/progress_bar"

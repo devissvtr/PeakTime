@@ -16,13 +16,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:cardCornerRadius="40dp">
+        app:cardCornerRadius="40dp" >
 
         <TextView
             android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wolf"
+            android:text="@string/wolf"
             android:layout_marginVertical="30dp"
             android:gravity="center"
             android:textStyle="bold"
@@ -32,7 +32,7 @@
             android:id="@+id/tv_descrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="If you know someone who isn’t a “morning person,” chances are they’re a wolf — about 15% of the population has this chronotype. Wolves usually wake up later in the day. They’ll also get bursts of energy in the evening. Midnight or later is a common bedtime for wolves."
+            android:text="@string/descChrono"
             android:layout_marginTop="70dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
@@ -41,7 +41,7 @@
             android:id="@+id/tv_percentage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15% of population"
+            android:text="@string/percentage"
             android:layout_marginTop="230dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
@@ -50,7 +50,7 @@
             android:id="@+id/startTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Work Start Time:"
+            android:text="@string/work_start_time"
             android:textStyle="bold"
             android:layout_marginTop="270dp"
             android:layout_marginHorizontal="30dp"
@@ -60,7 +60,7 @@
             android:id="@+id/tv_startTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="13:00"
+            android:text="@string/timeStart"
             android:layout_marginTop="290dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
@@ -69,7 +69,7 @@
             android:id="@+id/finishTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Work Finish Time:"
+            android:text="@string/work_finish_time"
             android:textStyle="bold"
             android:layout_marginTop="320dp"
             android:layout_marginHorizontal="30dp"
@@ -79,7 +79,7 @@
             android:id="@+id/tv_finishTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15:00"
+            android:text="@string/timeFinish"
             android:layout_marginTop="340dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
@@ -88,7 +88,7 @@
             android:id="@+id/wakeupTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wake Up Time:"
+            android:text="@string/wake_up_time"
             android:textStyle="bold"
             android:layout_marginTop="370dp"
             android:layout_marginHorizontal="30dp"
@@ -98,7 +98,7 @@
             android:id="@+id/tv_wakeupTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15:00"
+            android:text="@string/timeWakeUp"
             android:layout_marginTop="390dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
@@ -107,7 +107,7 @@
             android:id="@+id/sleepTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sleep Time:"
+            android:text="@string/sleep_time"
             android:textStyle="bold"
             android:layout_marginTop="420dp"
             android:layout_marginHorizontal="30dp"
@@ -117,7 +117,7 @@
             android:id="@+id/tv_sleepTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15:00"
+            android:text="@string/timeSleep"
             android:layout_marginTop="440dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />

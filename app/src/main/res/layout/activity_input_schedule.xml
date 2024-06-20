@@ -25,7 +25,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_title"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         app:boxCornerRadiusBottomEnd="10dp"
@@ -49,9 +49,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_description"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -73,14 +73,13 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_startDay"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tl_description"
         android:layout_marginHorizontal="20dp">
@@ -89,7 +88,9 @@
             android:id="@+id/edt_startDay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="start date"
+            android:hint="@string/start_date"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="10dp"
             android:inputType="textCapSentences"
             android:maxLines="1"
             android:focusable="false"
@@ -101,23 +102,24 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_startTime"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_startDay"
+        app:layout_constraintTop_toBottomOf="@id/tl_description"
         android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_startTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="start time"
+            android:hint="@string/start_time"
+            android:drawableStart="@drawable/baseline_access_time_24"
+            android:drawablePadding="10dp"
             android:inputType="textCapSentences"
             android:maxLines="1"
             android:focusable="false"
@@ -129,14 +131,13 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_finishDay"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tl_startTime"
         android:layout_marginHorizontal="20dp">
@@ -145,8 +146,10 @@
             android:id="@+id/edt_finishDay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="finish date"
+            android:hint="@string/finish_date"
             android:inputType="textCapSentences"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="10dp"
             android:maxLines="1"
             android:focusable="false"
             android:clickable="false"
@@ -157,7 +160,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_finishTime"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         app:boxCornerRadiusBottomEnd="10dp"
@@ -165,16 +168,17 @@
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_finishDay"
+        app:layout_constraintTop_toBottomOf="@id/tl_startTime"
         android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_finishTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="start time"
+            android:hint="@string/finish_time"
             android:inputType="textCapSentences"
+            android:drawableStart="@drawable/baseline_access_time_24"
+            android:drawablePadding="10dp"
             android:maxLines="1"
             android:focusable="false"
             android:clickable="false"
@@ -182,12 +186,43 @@
             android:focusableInTouchMode="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tl_finishTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/neutral4"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:id="@+id/tv_recommendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/effective_time"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_workTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/timeSchedule"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/primary1"
         android:text="@string/submit"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
