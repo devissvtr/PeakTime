@@ -22,7 +22,7 @@
         android:id="@+id/tv_darkMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/turn_on_dark_mode"
+        android:text="@string/turn_dark_mode"
         android:textSize="15sp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/tv_settingMode"

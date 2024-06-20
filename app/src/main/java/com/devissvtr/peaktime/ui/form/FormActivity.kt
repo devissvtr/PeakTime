@@ -33,10 +33,10 @@ class FormActivity : AppCompatActivity() {
 
         setupAutoCompleteTextView()
 
-        val userId = intent.getStringExtra("USER_ID") ?: return
+        val userId = intent.getStringExtra("userId") ?: return
 
         binding.btnSubmit.setOnClickListener {
-            submitForm(userId)
+            submitForm()
         }
     }
 
@@ -70,7 +70,7 @@ class FormActivity : AppCompatActivity() {
         autoCompleteQ10.setAdapter(adapterQ10)
     }
 
-    private fun submitForm(userId: String) {
+    private fun dataForm(userId: String) {
         showLoad(true)
 
         val age = binding.edtAge.text.toString().toInt()
@@ -125,5 +125,11 @@ class FormActivity : AppCompatActivity() {
 
     private fun showLoad(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    fun submitForm() {
+        val intent = Intent(this, PredictionActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

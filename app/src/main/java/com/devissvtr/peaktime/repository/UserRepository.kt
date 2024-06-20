@@ -12,6 +12,8 @@ import com.devissvtr.peaktime.network.response.RegisterResponse
 import com.devissvtr.peaktime.network.retrofit.ApiService
 import com.devissvtr.peaktime.utils.Result
 import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
 class UserRepository private constructor(
@@ -56,6 +58,12 @@ class UserRepository private constructor(
                 Gson().fromJson(it, AutenticationHandler::class.java)
             }
             emit(Result.Failure(errorResponse?.message?: "Unknown error"))
+        }
+    }
+
+    suspend fun clearSession() {
+        withContext(Dispatchers.IO) {
+            userPreference.logout()
         }
     }
 
