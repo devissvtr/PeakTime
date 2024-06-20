@@ -16,13 +16,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:cardCornerRadius="40dp" >
+        app:cardCornerRadius="40dp">
 
         <TextView
             android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="chronotypes"
+            android:text="Wolf"
             android:layout_marginVertical="30dp"
             android:gravity="center"
             android:textStyle="bold"
@@ -32,8 +32,8 @@
             android:id="@+id/tv_descrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/description"
-            android:layout_marginTop="80dp"
+            android:text="If you know someone who isn’t a “morning person,” chances are they’re a wolf — about 15% of the population has this chronotype. Wolves usually wake up later in the day. They’ll also get bursts of energy in the evening. Midnight or later is a common bedtime for wolves."
+            android:layout_marginTop="70dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -41,8 +41,8 @@
             android:id="@+id/tv_percentage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="percentage"
-            android:layout_marginTop="130dp"
+            android:text="15% of population"
+            android:layout_marginTop="230dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -51,7 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Work Start Time:"
-            android:layout_marginTop="170dp"
+            android:textStyle="bold"
+            android:layout_marginTop="270dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -60,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="13:00"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="290dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -69,7 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Work Finish Time:"
-            android:layout_marginTop="230dp"
+            android:textStyle="bold"
+            android:layout_marginTop="320dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -78,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15:00"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="340dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -87,7 +89,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Wake Up Time:"
-            android:layout_marginTop="290dp"
+            android:textStyle="bold"
+            android:layout_marginTop="370dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -96,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15:00"
-            android:layout_marginTop="310dp"
+            android:layout_marginTop="390dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -105,7 +108,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sleep Time:"
-            android:layout_marginTop="340dp"
+            android:textStyle="bold"
+            android:layout_marginTop="420dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
 
@@ -114,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15:00"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="440dp"
             android:layout_marginHorizontal="30dp"
             android:gravity="center" />
     </androidx.cardview.widget.CardView>

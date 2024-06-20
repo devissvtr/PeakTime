@@ -6,9 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.schedule.InputScheduleActivity"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginVertical="30dp" >
+    tools:context=".ui.schedule.InputScheduleActivity">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -20,21 +18,24 @@
         android:fontFamily="@font/montserrat_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="30dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tl_title"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_title"
@@ -57,7 +58,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tl_title">
+        app:layout_constraintTop_toBottomOf="@+id/tl_title"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_description"
@@ -80,7 +82,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_description">
+        app:layout_constraintTop_toBottomOf="@id/tl_description"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_startDay"
@@ -107,7 +110,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_startDay">
+        app:layout_constraintTop_toBottomOf="@id/tl_startDay"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_startTime"
@@ -134,7 +138,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_startTime">
+        app:layout_constraintTop_toBottomOf="@id/tl_startTime"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_finishDay"
@@ -161,7 +166,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_finishDay">
+        app:layout_constraintTop_toBottomOf="@id/tl_finishDay"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
             android:id="@+id/edt_finishTime"
@@ -184,7 +190,9 @@
         android:text="@string/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="30dp"/>
 
     <ProgressBar
         android:id="@+id/progress_bar"

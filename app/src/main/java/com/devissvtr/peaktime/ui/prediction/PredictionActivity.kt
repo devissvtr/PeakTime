@@ -2,20 +2,26 @@ package com.devissvtr.peaktime.ui.prediction
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.devissvtr.peaktime.R
+import com.devissvtr.peaktime.databinding.ActivityPredictionBinding
+import com.devissvtr.peaktime.network.retrofit.ApiService
+import com.devissvtr.peaktime.repository.PredictionRepository
 
 class PredictionActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityPredictionBinding
+//    private val viewModel: PredictionViewModel by viewModels {
+//        PredictionViewModelFactory(PredictionRepository(ApiService.create()))
+//    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_prediction)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        binding = ActivityPredictionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
     }
 }

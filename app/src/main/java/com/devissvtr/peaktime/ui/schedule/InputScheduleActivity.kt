@@ -35,6 +35,7 @@ class InputScheduleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         inputScheduleBinding = ActivityInputScheduleBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+        supportActionBar?.hide()
 
         calendar = Calendar.getInstance()
 
