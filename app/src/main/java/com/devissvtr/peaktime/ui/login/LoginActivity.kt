@@ -18,6 +18,7 @@ import com.devissvtr.peaktime.MainActivity
 import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivityLoginBinding
 import com.devissvtr.peaktime.helper.UserModelFactory
+import com.devissvtr.peaktime.ui.form.FormActivity
 import com.devissvtr.peaktime.ui.signup.SignupActivity
 import com.devissvtr.peaktime.utils.Result
 
