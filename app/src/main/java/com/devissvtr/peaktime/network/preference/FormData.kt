@@ -1,6 +1,7 @@
 package com.devissvtr.peaktime.network.preference
 
 data class FormData(
+    val userId: String,
     val age: Int,
     val task: String,
     val average_rest: Int,

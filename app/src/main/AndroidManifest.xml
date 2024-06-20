@@ -20,7 +20,7 @@
             android:name=".ui.authentication.AuthActivity"
             android:label="Authentication Activity"/>
         <activity
-            android:name=".ui.PredictionActivity"
+            android:name=".ui.prediction.PredictionActivity"
             android:exported="false" />
         <activity
             android:name=".ui.visualization.VisualizationActivity"

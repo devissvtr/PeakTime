@@ -28,6 +28,7 @@ import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivityLoginBinding
 import com.devissvtr.peaktime.helper.UserModelFactory
 import com.devissvtr.peaktime.helper.ViewModelFactory
+import com.devissvtr.peaktime.ui.form.FormActivity
 import com.devissvtr.peaktime.ui.note.NoteActivity
 import com.devissvtr.peaktime.ui.schedule.ScheduleActivity
 import com.devissvtr.peaktime.ui.signup.SignupActivity
@@ -77,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
                             setTitle("Login Success")
                             setMessage("You have successfully logged in")
                             setPositiveButton("Continue") { _, _ ->
-                                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                                val intent = Intent(this@LoginActivity, FormActivity::class.java)
                                 intent.flags =
                                     Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                                 startActivity(intent)

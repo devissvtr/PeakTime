@@ -5,6 +5,117 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.PredictionActivity">
+    tools:context=".ui.prediction.PredictionActivity"
+    android:background="@color/primary1">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="40dp" >
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="chronotypes"
+            android:layout_marginVertical="30dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_descrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:layout_marginTop="80dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="percentage"
+            android:layout_marginTop="130dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Work Start Time:"
+            android:layout_marginTop="170dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13:00"
+            android:layout_marginTop="190dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/finishTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Work Finish Time:"
+            android:layout_marginTop="230dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_finishTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15:00"
+            android:layout_marginTop="250dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/wakeupTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wake Up Time:"
+            android:layout_marginTop="290dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_wakeupTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15:00"
+            android:layout_marginTop="310dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/sleepTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sleep Time:"
+            android:layout_marginTop="340dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_sleepTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15:00"
+            android:layout_marginTop="360dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

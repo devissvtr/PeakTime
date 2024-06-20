@@ -21,6 +21,17 @@ data class PredictionData(
     val maxProbability: Double
 )
 data class PredictionResult(
+    @field:SerializedName("status")
+    val status: String,
+
+    @field:SerializedName("message")
+    val message: String,
+
+    @field:SerializedName("data")
+    val data: ResultData
+)
+
+data class ResultData(
     @field:SerializedName("chronotype")
     val chronotype: String,
 

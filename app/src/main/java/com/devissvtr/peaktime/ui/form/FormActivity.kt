@@ -1,5 +1,6 @@
 package com.devissvtr.peaktime.ui.form
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -17,6 +18,7 @@ import com.devissvtr.peaktime.ui.form.FieldData.itemsQ5
 import com.devissvtr.peaktime.ui.form.FieldData.itemsQ7
 import com.devissvtr.peaktime.ui.form.FieldData.itemsQ8
 import com.devissvtr.peaktime.repository.Result
+import com.devissvtr.peaktime.ui.prediction.PredictionActivity
 
 class FormActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFormBinding
@@ -31,8 +33,10 @@ class FormActivity : AppCompatActivity() {
 
         setupAutoCompleteTextView()
 
+        val userId = intent.getStringExtra("USER_ID") ?: return
+
         binding.btnSubmit.setOnClickListener {
-//            submitForm()
+            submitForm(userId)
         }
     }
 
@@ -66,7 +70,7 @@ class FormActivity : AppCompatActivity() {
         autoCompleteQ10.setAdapter(adapterQ10)
     }
 
-    private fun submitForm(token: String) {
+    private fun submitForm(userId: String) {
         showLoad(true)
 
         val age = binding.edtAge.text.toString().toInt()
@@ -81,33 +85,39 @@ class FormActivity : AppCompatActivity() {
         val averageWorkHour = binding.edtField9.text.toString().toInt()
         val workDays = binding.edtField10.text.toString()
 
+        if (age == 0 || task.isEmpty() || moodBeforeWork.isEmpty() || deadline.isEmpty() || importance == 0 || sleepAverage == 0 || urgency == 0 || totalGangguan.isEmpty() || averageWorkHour == 0 || workDays.isEmpty()) {
+            Toast.makeText(this@FormActivity, "Please fill in all fields.", Toast.LENGTH_SHORT).show()
+            showLoad(false)
+        } else if (userId != null){
+            viewModel.submitForm(
+                userId,
+                age,
+                task,
+                averageRest,
+                moodBeforeWork,
+                deadline,
+                importance,
+                sleepAverage,
+                urgency,
+                totalGangguan,
+                averageWorkHour,
+                workDays
+            ).observe(this) {
+                when (it) {
+                    is Result.Loading-> {
+                        showLoad(true)
+                    }
+                    is Result.Success -> {
+                        showLoad(false)
+                        val intent = Intent(this@FormActivity, PredictionActivity::class.java)
+                        startActivity(intent)
+                        finish()
 
-
-        viewModel.submitForm(
-//            userId,
-            age,
-            task,
-            averageRest,
-            moodBeforeWork,
-            deadline,
-            importance,
-            sleepAverage,
-            urgency,
-            totalGangguan,
-            averageWorkHour,
-            workDays
-        ).observe(this) {
-            when (it) {
-                is Result.Loading-> {
-                    showLoad(true)
-                }
-                is Result.Success -> {
-                    showLoad(false)
-                    Toast.makeText(this@FormActivity, "Form submitted successfully!", Toast.LENGTH_SHORT).show()
-                }
-                is Result.Error -> {
-                    showLoad(false)
-                    Toast.makeText(this@FormActivity, "Error: ", Toast.LENGTH_SHORT).show()
+                    }
+                    is Result.Error -> {
+                        showLoad(false)
+                        Toast.makeText(this@FormActivity, "Form submitted failed", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
@@ -116,12 +126,4 @@ class FormActivity : AppCompatActivity() {
     private fun showLoad(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
-
-//    private fun showPrediction(formResponse: FormResponse) {
-//        val predictionIntent = Intent(this, PredictionActivity::class.java).apply {
-//            putExtra("status", formResponse.status)
-//            putExtra("message", formResponse.message)
-//        }
-//        startActivity(predictionIntent)
-//    }
 }

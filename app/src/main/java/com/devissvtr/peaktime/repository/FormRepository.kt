@@ -5,12 +5,13 @@ import androidx.lifecycle.liveData
 import com.devissvtr.peaktime.network.response.FormResponse
 import com.devissvtr.peaktime.network.retrofit.ApiService
 import kotlinx.coroutines.Dispatchers
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 
 class FormRepository private constructor(private val apiService: ApiService) {
     fun formData(
-//        userId: String,
+        userId: String,
         age: Int,
         task: String,
         averageRest: Int,
@@ -27,18 +28,18 @@ class FormRepository private constructor(private val apiService: ApiService) {
 
         try {
             val response = apiService.formData(
-//                userId,
-                age.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-                task.toRequestBody("text/plain".toMediaTypeOrNull()),
-                averageRest.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-                moodBeforeWork.toRequestBody("text/plain".toMediaTypeOrNull()),
-                deadline.toRequestBody("text/plain".toMediaTypeOrNull()),
-                importance.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-                sleepAverage.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-                urgency.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-                totalGangguan.joinToString(",").toRequestBody("text/plain".toMediaTypeOrNull()),
-                averageWorkHour.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-                workDays.toRequestBody("text/plain".toMediaTypeOrNull())
+                userId,
+                age.toString().toRequestBody("text/plain".toMediaType()),
+                task.toRequestBody("text/plain".toMediaType()),
+                averageRest.toString().toRequestBody("text/plain".toMediaType()),
+                moodBeforeWork.toRequestBody("text/plain".toMediaType()),
+                deadline.toRequestBody("text/plain".toMediaType()),
+                importance.toString().toRequestBody("text/plain".toMediaType()),
+                sleepAverage.toString().toRequestBody("text/plain".toMediaType()),
+                urgency.toString().toRequestBody("text/plain".toMediaType()),
+                totalGangguan.joinToString(",").toRequestBody("text/plain".toMediaType()),
+                averageWorkHour.toString().toRequestBody("text/plain".toMediaType()),
+                workDays.toRequestBody("text/plain".toMediaType())
             )
             emit(Result.Success(response))
         } catch (e: Exception) {

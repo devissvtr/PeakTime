@@ -1,4 +1,4 @@
-package com.devissvtr.peaktime.ui
+package com.devissvtr.peaktime.ui.prediction
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
