@@ -12,9 +12,10 @@ Our team created an application called PeakTime, where this application aims to 
 - www.linkedin.com/in/abdrizkyfero
 - www.linkedin.com/in/luhkomangdevi
 
-#Figma Link
+# Figma Link
+
 https://www.figma.com/design/MQUwJpdplSsR84phDhSQ9n/Capstone-PeakTime?node-id=13-3&t=FPagdRNadBA08lDH-1
-![SplashScreen]["C:\Users\ACER\Pictures\capstone\ui\SplashScreen.png"]
+
 
 
 
