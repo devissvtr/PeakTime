@@ -19,7 +19,6 @@ class AuthActivity : AppCompatActivity() {
     }
     private var userId: String? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
@@ -46,12 +45,10 @@ class AuthActivity : AppCompatActivity() {
                 }
 
                 is Result.Success -> {
-                    // Verifikasi berhasil, arahkan ke halaman login
                     val intent = Intent(this@AuthActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
-
                 is Result.Failure -> {
                     showToast("Failed to verify token: ${result.message}")
                 }

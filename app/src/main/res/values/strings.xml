@@ -87,5 +87,13 @@
     <string name="theme">Theme</string>
     <string name="logout">Logout</string>
     <string name="recommendation">Recommendation</string>
+    <string name="registration_success">Registration Success</string>
+    <string name="email_token">Check your email for the token</string>
+    <string name="id_notFound">User id not found</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_successful">login successful</string>
+    <string name="verification_code">Input your verification code</string>
+    <string name="input_token">Input your token</string>
+    <string name="verification">verification</string>
 
 </resources>

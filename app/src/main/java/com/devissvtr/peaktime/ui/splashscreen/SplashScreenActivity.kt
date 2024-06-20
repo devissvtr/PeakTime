@@ -7,12 +7,7 @@ import android.os.Handler
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.window.SplashScreen
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.ActivitySplashScreenBinding
 import com.devissvtr.peaktime.ui.login.LoginActivity
 
