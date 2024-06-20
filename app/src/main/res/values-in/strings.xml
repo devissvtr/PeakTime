@@ -88,4 +88,12 @@
     <string name="theme">Tema</string>
     <string name="logout">Keluar</string>
     <string name="recommendation">Rekomendasi</string>
+    <string name="registration_success">Registrasi berhasil</string>
+    <string name="email_token">Periksa email Anda untuk melihat token</string>
+    <string name="id_notFound">User id not found</string>
+    <string name="login_success">Login berhasil</string>
+    <string name="login_successful">login berhasil</string>
+    <string name="verification_code">Masukkan kode verifikasi Anda</string>
+    <string name="input_token">Masukkan token Anda</string>
+    <string name="verification">verifikasi</string>
 </resources>

@@ -51,8 +51,8 @@ class LoginActivity : AppCompatActivity() {
 
                     is Result.Success -> {
                         AlertDialog.Builder(this).apply {
-                            setTitle("Login Success")
-                            setMessage("You have successfully logged in")
+                            setTitle(getString(R.string.login_success))
+                            setMessage(getString(R.string.login_successful))
                             setPositiveButton("Continue") { _, _ ->
                                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                                 intent.flags =
