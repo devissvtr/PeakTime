@@ -9,15 +9,11 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.devissvtr.peaktime.databinding.FragmentModeBinding
-import com.devissvtr.peaktime.helper.ViewModelFactory
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class ModeFragment : Fragment() {
 
     private var _binding: FragmentModeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,7 +21,6 @@ class ModeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        //val modeViewModel = ViewModelProvider(this)[ModeViewModel::class.java]
 
         _binding = FragmentModeBinding.inflate(inflater, container, false)
         val root: View = binding.root

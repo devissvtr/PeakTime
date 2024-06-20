@@ -141,6 +141,6 @@ class InputNoteActivity : AppCompatActivity() {
 
     private fun obtainViewModel(activity: AppCompatActivity): InputNoteViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
-        return ViewModelProvider(activity, factory).get(InputNoteViewModel::class.java)
+        return ViewModelProvider(activity, factory)[InputNoteViewModel::class.java]
     }
 }

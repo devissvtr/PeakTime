@@ -3,7 +3,6 @@ package com.devissvtr.peaktime.ui.signup
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.os.Message
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
