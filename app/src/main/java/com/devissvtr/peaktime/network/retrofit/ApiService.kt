@@ -42,6 +42,7 @@ interface ApiService {
     @FormUrlEncoded
     @POST("users/{userId}")
     suspend fun autenticationHandler(
+        @Path("userId") userId: String,
         @Field("code") code: String
     ): AutenticationHandler
 

@@ -51,16 +51,22 @@ class SignupActivity : AppCompatActivity() {
                         }
 
                         is Result.Success -> {
-                            AlertDialog.Builder(this).apply {
-                                setTitle("Registration Success")
-                                setMessage("Your account has been registered")
-                                setPositiveButton("Continue") { _, _ ->
-                                    val intent = Intent(this@SignupActivity, LoginActivity::class.java)
-                                    startActivity(intent)
-                                    finish()
+                            val userId = result.data.data?.userId
+                            Log.e("user id", "user id : $userId")
+                            if (userId != null) {
+                                AlertDialog.Builder(this).apply {
+                                    setTitle("Registration Success")
+                                    setMessage("Your account has been registered")
+                                    setPositiveButton("Continue") { _, _ ->
+                                        val intent = Intent(this@SignupActivity, LoginActivity::class.java)
+                                        startActivity(intent)
+                                        finish()
+                                    }
+                                    create()
+                                    show()
                                 }
-                                create()
-                                show()
+                            }else {
+                                showToast("User id not found")
                             }
                         }
                         is Result.Failure -> {

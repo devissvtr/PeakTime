@@ -23,7 +23,7 @@ class ScheduleActivity : AppCompatActivity() {
         binding = ActivityScheduleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        scheduleAdapter = ScheduleAdapter(schedules)
+        //scheduleAdapter = ScheduleAdapter(schedules)
         binding.rvFavUser.layoutManager = LinearLayoutManager(this)
         binding.rvFavUser.adapter = scheduleAdapter
 
