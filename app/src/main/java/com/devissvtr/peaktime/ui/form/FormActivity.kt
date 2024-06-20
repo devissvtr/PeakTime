@@ -32,7 +32,7 @@ class FormActivity : AppCompatActivity() {
         setupAutoCompleteTextView()
 
         binding.btnSubmit.setOnClickListener {
-            submitForm()
+//            submitForm()
         }
     }
 
@@ -66,7 +66,9 @@ class FormActivity : AppCompatActivity() {
         autoCompleteQ10.setAdapter(adapterQ10)
     }
 
-    private fun submitForm() {
+    private fun submitForm(token: String) {
+        showLoad(true)
+
         val age = binding.edtAge.text.toString().toInt()
         val task = binding.edtField1.text.toString()
         val averageRest = binding.edtField2.text.toString().toInt()
@@ -78,6 +80,8 @@ class FormActivity : AppCompatActivity() {
         val totalGangguan = binding.edtField8.text.toString().split(",").toTypedArray()
         val averageWorkHour = binding.edtField9.text.toString().toInt()
         val workDays = binding.edtField10.text.toString()
+
+
 
         viewModel.submitForm(
 //            userId,

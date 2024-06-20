@@ -57,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
             postLogin()
+            //====================
 //            val intent = Intent(this@LoginActivity, MainActivity::class.java)
 //            startActivity(intent)
         }
@@ -66,8 +67,8 @@ class LoginActivity : AppCompatActivity() {
         val email = binding.emailEditText.text.toString()
         val password = binding.passwordEditText.text.toString()
         login.login(email = email, password = password).observe(this) { result ->
-            if (result!= null) {
-                when(result) {
+            if (result != null) {
+                when (result) {
                     is Result.InProgress -> {
                     }
 
@@ -77,7 +78,8 @@ class LoginActivity : AppCompatActivity() {
                             setMessage("You have successfully logged in")
                             setPositiveButton("Continue") { _, _ ->
                                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                intent.flags =
+                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                                 startActivity(intent)
                                 finish()
                             }
@@ -96,13 +98,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showToast(message: String) {
-        Toast.makeText(this,message, Toast.LENGTH_LONG).show()
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
     private fun spannableText() {
         val text = SpannableString(getString(R.string.not_register))
 
-        val clickText = object : ClickableSpan(){
+        val clickText = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 val intent = Intent(this@LoginActivity, SignupActivity::class.java)
                 startActivity(intent)
@@ -114,6 +116,7 @@ class LoginActivity : AppCompatActivity() {
         binding.textView2.text = text
         binding.textView2.movementMethod = LinkMovementMethod.getInstance()
     }
+}
 
 //    @Composable
 //    fun GoogleSignInButton(){
@@ -161,4 +164,4 @@ class LoginActivity : AppCompatActivity() {
 //
 //        //Button(onClick = onClick) {}
 //    }
-}
+//}
