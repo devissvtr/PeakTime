@@ -22,9 +22,16 @@
         <activity
             android:name=".ui.prediction.PredictionActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.visualization.VisualizationActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.form.FormActivity"
             android:exported="false" />
@@ -36,7 +43,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.schedule.ScheduleActivity"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.PeakTime.TransparentActionBar" />
         <activity
             android:name=".ui.note.InputNoteActivity"
@@ -59,14 +66,9 @@
             android:theme="@style/Theme.PeakTime.NoActionBar" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
-            android:exported="true"
-            android:theme="@style/Theme.PeakTime.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false"
+            android:theme="@style/Theme.PeakTime.NoActionBar"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false"

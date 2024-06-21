@@ -3,37 +3,32 @@ package com.devissvtr.peaktime.ui.home
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.devissvtr.peaktime.MainActivity
-import com.devissvtr.peaktime.databinding.ContentMainBinding
+import com.devissvtr.peaktime.R
 import com.devissvtr.peaktime.databinding.FragmentHomeBinding
 import com.devissvtr.peaktime.ui.history.HistoryActivity
+import com.devissvtr.peaktime.ui.login.LoginActivity
 import com.devissvtr.peaktime.ui.note.NoteActivity
 import com.devissvtr.peaktime.ui.notification.NotificationActivity
 import com.devissvtr.peaktime.ui.schedule.ScheduleActivity
 import com.devissvtr.peaktime.ui.visualization.VisualizationActivity
 
-//import com.devissvtr.peaktime.databinding.FragmentGalleryBinding
-
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -61,13 +56,33 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), NotificationActivity::class.java)
             startActivity(intent)
         }
-
-//        val textView: TextView = binding.textGallery
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
         return root
     }
+
+//    fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater): Boolean {
+//        inflater.inflate(R.menu.main, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when(item.itemId) {
+//            R.id.menu_logout -> {
+//                AlertDialog.Builder(this)
+//                    .setTitle("Sign Out")
+//                    .setMessage("Do you sure want to sign out?")
+//                    .setPositiveButton("Yes") { _, _ -> signOut() }
+//                    .setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+//                    .show()
+//            }
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
+//
+//    private fun signOut() {
+//        startActivity(Intent(this, LoginActivity::class.java))
+//        finish()
+//    }
+//
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.devissvtr.peaktime.databinding.FragmentLanguangeBinding
 
 class LanguageFragment : Fragment() {
-
     private var _binding: FragmentLanguangeBinding? = null
 
     private val binding get() = _binding!!
@@ -18,9 +17,6 @@ class LanguageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val languageViewModel =
-            ViewModelProvider(this).get(LanguageViewModel::class.java)
-
         _binding = FragmentLanguangeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 

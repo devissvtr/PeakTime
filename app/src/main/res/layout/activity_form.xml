@@ -450,13 +450,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_submit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
             android:backgroundTint="@color/primary1"
             android:text="@string/submit"
+            android:onClick="submitForm"
             app:layout_constraintEnd_toEndOf="@id/tl_field10"
             app:layout_constraintStart_toStartOf="@id/tl_field10"
             app:layout_constraintTop_toBottomOf="@id/tl_field10"
