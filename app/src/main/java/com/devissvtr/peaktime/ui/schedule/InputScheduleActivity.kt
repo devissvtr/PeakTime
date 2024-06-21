@@ -46,21 +46,24 @@ class InputScheduleActivity : AppCompatActivity() {
         finishTime.setOnClickListener { showTimePicker(finishTime) }
 
         binding?.btnSubmit?.setOnClickListener {
-            val title = binding?.edtTitle?.text.toString().trim()
-            val description = binding?.edtDescription?.text.toString().trim()
-            val startDayText = startDay.text.toString()
-            val startTimeText = startTime.text.toString()
-            val finishDateText = finishDay.text.toString()
-            val finishTimeText = finishTime.text.toString()
-            when {
-                title.isEmpty() -> {
-                    binding?.edtTitle?.error
-                }
-            }
-            val resultIntent = Intent()
-            resultIntent.putExtra("schedule", schedule)
-            setResult(Activity.RESULT_OK, resultIntent)
+            val intent = Intent(this, SchedulesActivity::class.java)
+            startActivity(intent)
             finish()
+//            val title = binding?.edtTitle?.text.toString().trim()
+//            val description = binding?.edtDescription?.text.toString().trim()
+//            val startDayText = startDay.text.toString()
+//            val startTimeText = startTime.text.toString()
+//            val finishDateText = finishDay.text.toString()
+//            val finishTimeText = finishTime.text.toString()
+//            when {
+//                title.isEmpty() -> {
+//                    binding?.edtTitle?.error
+//                }
+//            }
+//            val resultIntent = Intent()
+//            resultIntent.putExtra("schedule", schedule)
+//            setResult(Activity.RESULT_OK, resultIntent)
+//            finish()
         }
     }
 
@@ -84,9 +87,5 @@ class InputScheduleActivity : AppCompatActivity() {
             text.setText(format)
         }, hours, minutes, true)
         timePicker.show()
-    }
-
-    private fun showLoad(isLoading: Boolean) {
-        binding?.progressBar?.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

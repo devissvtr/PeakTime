@@ -31,9 +31,9 @@
     <string name="header_form">Discover Your Unique Chronotype</string>
 
     <string name="history">History</string>
-    <string name="title_history">Title</string>
-    <string name="time_history">Time</string>
-    <string name="description_history">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="title_history">You have successfully added a note!</string>
+    <string name="time_history">now</string>
+    <string name="description_history">click to open the notes page</string>
 
     <string name="notes">Notes</string>
     <string name="title">title</string>
@@ -119,5 +119,9 @@
     <string name="setting_dark_mode">Setting Dark Mode</string>
     <string name="turn_dark_mode">Turn Dark Mode</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleSchedule">Course Dicoding</string>
+    <string name="daySchedule">2024-06-21</string>
+    <string name="timeSchedules">13:00 - 15:00</string>
+    <string name="descriptionSchedules">do the sub-section quiz on coding</string>
 
 </resources>

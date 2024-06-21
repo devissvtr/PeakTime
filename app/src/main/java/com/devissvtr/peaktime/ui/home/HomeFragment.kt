@@ -59,31 +59,6 @@ class HomeFragment : Fragment() {
         return root
     }
 
-//    fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater): Boolean {
-//        inflater.inflate(R.menu.main, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId) {
-//            R.id.menu_logout -> {
-//                AlertDialog.Builder(this)
-//                    .setTitle("Sign Out")
-//                    .setMessage("Do you sure want to sign out?")
-//                    .setPositiveButton("Yes") { _, _ -> signOut() }
-//                    .setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
-//                    .show()
-//            }
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
-//
-//    private fun signOut() {
-//        startActivity(Intent(this, LoginActivity::class.java))
-//        finish()
-//    }
-//
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

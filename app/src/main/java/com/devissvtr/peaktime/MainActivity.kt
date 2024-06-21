@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.devissvtr.peaktime.databinding.ActivityMainBinding
 import de.hdodenhof.circleimageview.CircleImageView
 import android.provider.Settings
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
+import com.devissvtr.peaktime.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,8 +73,29 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.menu_logout -> {
+                AlertDialog.Builder(this)
+                    .setTitle("Sign Out")
+                    .setMessage("Do you sure want to sign out?")
+                    .setPositiveButton("Yes") { _, _ -> signOut() }
+                    .setNegativeButton("No") { dialog,_ -> dialog.dismiss() }
+                    .show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun signOut() {
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
+
+

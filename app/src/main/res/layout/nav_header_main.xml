@@ -21,21 +21,21 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:contentDescription="@string/nav_header_desc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.20"
+            app:layout_constraintVertical_bias="0.40"
             tools:layout_editor_absoluteX="0dp"
-            tools:src="@drawable/color" />
+            android:src="@drawable/color"/>
 
         <TextView
             android:id="@+id/tv_nameUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Devi Savitri"
+            android:text="Kesya Gloria"
             android:textSize="18sp"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginTop="10dp"
@@ -47,7 +47,7 @@
             android:id="@+id/tv_emailUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="lkdevi16@gmail.com"
+            android:text="gloriakesya70@gmail.com"
             android:textSize="12sp"
             android:fontFamily="@font/montserrat_regular"
             app:layout_constraintStart_toStartOf="parent"

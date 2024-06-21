@@ -30,8 +30,8 @@ class VisualizationActivity : AppCompatActivity() {
     }
 
     private fun dataListing() {
-        taskValues.add(PieEntry(2f, "Completed Tasks"))
-        taskValues.add(PieEntry(1f, "In Progress Tasks"))
+        taskValues.add(PieEntry(1f, "Completed Tasks"))
+        taskValues.add(PieEntry(2f, "In Progress Tasks"))
         setChart()
     }
 

@@ -17,21 +17,17 @@
         android:theme="@style/Theme.PeakTime"
         tools:targetApi="31">
         <activity
+            android:name=".ui.schedule.SchedulesActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.authentication.AuthActivity"
-            android:label="Authentication Activity"/>
+            android:label="Authentication Activity" />
         <activity
             android:name=".ui.prediction.PredictionActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.visualization.VisualizationActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".ui.form.FormActivity"
             android:exported="false" />
@@ -66,13 +62,20 @@
             android:theme="@style/Theme.PeakTime.NoActionBar" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
-            android:exported="false"
-            android:theme="@style/Theme.PeakTime.NoActionBar"/>
+            android:exported="true"
+            android:theme="@style/Theme.PeakTime.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.PeakTime.NoActionBar" />
+            android:theme="@style/Theme.PeakTime.NoActionBar"/>
+
     </application>
+
 </manifest>
